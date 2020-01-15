@@ -1,4 +1,4 @@
-select p.title, c.title 
-from Product p
-left join ProductCategoryRelations pcr ON pcr.productId = p.id
-left join Category c ON pcr.caregoryId = c.id
+select a.title as 'Тема статьи', t.name as 'Тэг' 
+from Article a
+left join ArticleTagRelations atr ON atr.articleId = a.id
+left join Tag t ON atr.tagId = t.id
